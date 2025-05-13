@@ -39,23 +39,23 @@ const Careers = () => {
       id="careers" 
       title="Join Our Team"
       subtitle="Build your career at the forefront of data innovation"
-      dark
+      // dark prop removed for white background
     >
       <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
         <div>
-          <h3 className="text-2xl font-bold text-white mb-4">Why Work With Us?</h3>
-          <p className="text-gray-300 mb-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Work With Us?</h3>
+          <p className="text-gray-700 mb-6">
             At Trinity Technology Solution, we're building a team of passionate data professionals who are driven to solve complex challenges and make a meaningful impact. Our collaborative culture encourages innovation, continuous learning, and professional growth.
           </p>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-700 mb-6">
             As a global company with offices in four countries, we offer diverse perspectives and opportunities to work on cutting-edge projects across various industries and technologies.
           </p>
           
-          <h4 className="text-xl font-semibold text-white mt-8 mb-4">Benefits & Perks</h4>
+          <h4 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Benefits & Perks</h4>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
             {benefits.map((benefit, index) => (
-              <li key={index} className="flex items-start text-gray-300">
-                <span className="text-blue-400 mr-2">✓</span>
+              <li key={index} className="flex items-start text-gray-700">
+                <span className="text-blue-500 mr-2">✓</span>
                 {benefit}
               </li>
             ))}
@@ -71,27 +71,23 @@ const Careers = () => {
         </div>
       </div>
 
-      <h3 className="text-2xl font-bold text-white text-center mb-8">Current Openings</h3>
+      <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Current Openings</h3>
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         {jobOpenings.map((job, index) => (
-          <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
-            <h4 className="text-xl font-bold text-white mb-3">{job.title}</h4>
-            
-            <div className="flex items-center text-gray-400 mb-2">
+          <div key={index} className="bg-white rounded-lg p-6 hover:bg-slate-100 transition-colors border border-gray-200 shadow-lg">
+            <h4 className="text-xl font-bold text-gray-900 mb-3">{job.title}</h4>
+            <div className="flex items-center text-gray-500 mb-2">
               <MapPin size={16} className="mr-1" />
               <span>{job.location}</span>
             </div>
-            
-            <div className="flex items-center text-gray-400 mb-4">
+            <div className="flex items-center text-gray-500 mb-4">
               <Clock size={16} className="mr-1" />
               <span>{job.type}</span>
             </div>
-            
-            <p className="text-gray-300 mb-6">{job.description}</p>
-            
+            <p className="text-gray-700 mb-6">{job.description}</p>
             <Button 
               variant="outline" 
-              className="w-full border-gray-600 text-gray-300 hover:bg-gray-600"
+              className="w-full border-gray-600 text-gray-900 hover:bg-gray-100"
             >
               View Details
             </Button>
@@ -100,10 +96,10 @@ const Careers = () => {
       </div>
 
       <div className="text-center">
-        <p className="text-gray-300 mb-6">Don't see a position that matches your skills? We're always looking for talented individuals to join our team.</p>
+        <p className="text-gray-700 mb-6">Don't see a position that matches your skills? We're always looking for talented individuals to join our team.</p>
         <Button 
           variant="primary" 
-          className="bg-blue-500 hover:bg-blue-600"
+          className="bg-blue-500 hover:bg-blue-600 text-white"
         >
           <Briefcase size={16} className="mr-2" />
           Submit Your Resume

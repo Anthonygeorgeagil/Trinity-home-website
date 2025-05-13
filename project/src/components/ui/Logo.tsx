@@ -1,5 +1,6 @@
 import React from 'react';
 import { Database } from 'lucide-react';
+import trinity from '../ui/trinity.png'
 interface LogoProps {
   className?: string;
 }
@@ -7,9 +8,9 @@ const Logo: React.FC<LogoProps> = ({ className = '' }) => {
   return (
     <div className={`flex items-center ${className}`}>
       <img
-        src="https://trinitetech.com/wp-content/uploads/2023/12/Logo-trinity.webp"
+        src={trinity}
         alt="TrinityTech Logo"
-        className="mr-6 h-12 mt-4" // Adjust height as needed
+        className="mr-6 h-20 mt-4" // Adjust height as needed
       />
       
     </div>

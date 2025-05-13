@@ -20,7 +20,7 @@ const TechStack = () => {
     },
     {
       name: 'FiveTran',
-      logo: 'https://cdn.prod.website-files.com/624da42b5f2beca5145266dc/62563684303eae7093e52548_fivetran.svg',
+      logo: 'https://images.icon-icons.com/2699/PNG/512/fivetran_logo_icon_170149.png',
       description: 'Automated data integration for seamless data pipelines'
     }
   ];
@@ -30,13 +30,13 @@ const TechStack = () => {
       id="tech-stack" 
       title="Our Technology Stack"
       subtitle="Cutting-edge technologies powering our data solutions"
-      dark
+      // dark prop removed for white background
     >
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {technologies.map((tech, index) => (
           <div 
             key={index} 
-            className="bg-gray-800 rounded-lg p-6 text-center transition-transform hover:-translate-y-2 duration-300"
+            className="bg-white rounded-lg p-6 text-center shadow-2xl border-4 border-gray-300 transition-transform hover:-translate-y-2 duration-300"
           >
             <div className="h-16 flex items-center justify-center mb-4">
               <img 
@@ -45,26 +45,26 @@ const TechStack = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">{tech.name}</h3>
-            <p className="text-gray-400">{tech.description}</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{tech.name}</h3>
+            <p className="text-gray-700">{tech.description}</p>
           </div>
         ))}
       </div>
 
       <div className="mt-16 text-center">
-        <h3 className="text-2xl font-bold text-white mb-6">Proud Databricks Partner</h3>
-        <div className="bg-gray-800 p-8 rounded-lg max-w-3xl mx-auto">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Proud Databricks Partner</h3>
+        <div className="bg-white p-8 rounded-lg max-w-3xl mx-auto shadow-1xl border-4 border-gray-300">
           <div className="flex justify-center mb-6">
             <img 
               src="https://www.databricks.com/wp-content/uploads/2021/10/db-nav-logo.svg" 
               alt="Databricks logo" 
-              className="h-12"
+              className="h-12 "
             />
           </div>
-          <p className="text-gray-300 mb-4">
+          <p className="text-gray-700 mb-4">
             Our official partnership with Databricks allows us to deliver best-in-class data and AI solutions on a unified, scalable platform.
           </p>
-          <p className="text-gray-300">
+          <p className="text-gray-700">
             Together, we help organizations accelerate innovation and unlock the true value of their data through simplified analytics and machine learning.
           </p>
         </div>
