@@ -15,7 +15,7 @@ const About = () => (
     title="About Trinity Technology Solution"
     subtitle="Your Trusted Partner in Digital Transformation"
   >
-    <div className="grid md:grid-cols-2 gap-12 items-center">
+    <div className="grid md:grid-cols-2 gap-12 items-center pb-2">
       <div>
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
         <p className="text-gray-600 mb-6">

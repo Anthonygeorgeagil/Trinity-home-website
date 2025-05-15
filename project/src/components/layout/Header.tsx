@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Logo from '../ui/Logo';
 
 const Header = () => {
@@ -41,9 +41,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <Logo 
-            className={`h-10 w-auto ${isScrolled ? 'text-blue-700' : 'text-white'}`} 
-          />
+          <Logo className="h-10 w-auto" />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
@@ -51,9 +49,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-medium transition-colors hover:text-blue-600 ${
-                  isScrolled ? 'text-gray-800' : 'text-white'
-                }`}
+                className="font-medium transition-colors hover:text-blue-600 text-black"
               >
                 {link.name}
               </a>
@@ -65,13 +61,13 @@ const Header = () => {
 
           {/* Mobile Navigation Button */}
           <button
-            className="md:hidden text-gray-500"
+            className="md:hidden text-gray-800"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <X size={24} className={isScrolled ? 'text-gray-800' : 'text-white'} />
+              <X size={24} className="text-gray-800" />
             ) : (
-              <Menu size={24} className={isScrolled ? 'text-gray-800' : 'text-white'} />
+              <Menu size={24} className="text-gray-800" />
             )}
           </button>
         </div>
@@ -82,11 +78,11 @@ const Header = () => {
         <div className="md:hidden bg-white shadow-lg">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
+              {navLinks.map((link, idx) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-800 font-medium hover:text-blue-600 transition-colors"
+                  className={`text-gray-800 font-medium hover:text-blue-600 transition-colors ${idx === 0 ? 'mt-4' : ''}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
