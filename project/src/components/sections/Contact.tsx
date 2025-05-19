@@ -16,70 +16,75 @@ const Contact = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
           
           <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Full Name
-                </label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email Address
-                </label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="john.doe@example.com"
-                />
-              </div>
-            </div>
-            
-            <div>
-              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                Company
-              </label>
-              <input 
-                type="text" 
-                id="company" 
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Your Company"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                Subject
-              </label>
-              <input 
-                type="text" 
-                id="subject" 
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="How can we help you?"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                Message
-              </label>
-              <textarea 
-                id="message" 
-                rows={5}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Please describe how we can assist you..."
-              />
-            </div>
-            
-            <Button variant="primary" className="w-full">
-              Send Message
-            </Button>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+          Full Name
+            </label>
+            <input 
+          type="text" 
+          id="name" 
+          name="name"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="John Doe"
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+          Email Address
+            </label>
+            <input 
+          type="email" 
+          id="email" 
+          name="email"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="john.doe@example.com"
+            />
+          </div>
+        </div>
+        
+        <div>
+          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+            Company
+          </label>
+          <input 
+            type="text" 
+            id="company" 
+            name="company"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Your Company"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+            Subject
+          </label>
+          <input 
+            type="text" 
+            id="subject" 
+            name="subject"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="How can we help you?"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+            Message
+          </label>
+          <textarea 
+            id="message" 
+            name="message"
+            rows={5}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Please describe how we can assist you..."
+          />
+        </div>
+        
+        <Button variant="primary" className="w-full">
+          Send Message
+        </Button>
           </form>
         </div>
         
@@ -88,64 +93,64 @@ const Contact = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
           
           <div className="space-y-8">
-            <div className="flex items-start">
-              <div className="bg-blue-100 p-3 rounded-full mr-4">
-                <Mail size={24} className="text-blue-600" />
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-1">Email Us</h4>
-                <p className="text-gray-600 mb-1">General Inquiries</p>
-                <a href="mailto:info@trinitytechsolutions.com" className="text-blue-600 hover:text-blue-700">
-                  info@trinitytechsolutions.com
-                </a>
-                <p className="text-gray-600 mt-2 mb-1">Business Development</p>
-                <a href="mailto:sales@trinitytechsolutions.com" className="text-blue-600 hover:text-blue-700">
-                  sales@trinitytechsolutions.com
-                </a>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <div className="bg-blue-100 p-3 rounded-full mr-4">
-                <Phone size={24} className="text-blue-600" />
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-1">Call Us</h4>
-                <p className="text-gray-600 mb-1">USA Office</p>
-                <a href="tel:+12345678901" className="text-blue-600 hover:text-blue-700">
-                  +1 (234) 567-8901
-                </a>
-                <p className="text-gray-600 mt-2 mb-1">Global Support</p>
-                <a href="tel:+31234567890" className="text-blue-600 hover:text-blue-700">
-                  +31 (234) 567-890
-                </a>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <div className="bg-blue-100 p-3 rounded-full mr-4">
-                <MessageSquare size={24} className="text-blue-600" />
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-1">Live Chat</h4>
-                <p className="text-gray-600 mb-4">
-                  Our support team is available Monday through Friday from 9:00 AM to 6:00 PM CET.
-                </p>
-                <Button variant="outline">
-                  Start a Chat
-                </Button>
-              </div>
-            </div>
+        <div className="flex items-start">
+          <div className="bg-blue-100 p-3 rounded-full mr-4">
+            <Mail size={24} className="text-blue-600" />
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold text-gray-900 mb-1">Email Us</h4>
+            <p className="text-gray-600 mb-1">General Inquiries</p>
+            <a href="mailto:info@trinitytechsolutions.com" className="text-blue-600 hover:text-blue-700">
+          info@trinitytechsolutions.com
+            </a>
+            <p className="text-gray-600 mt-2 mb-1">Business Development</p>
+            <a href="mailto:sales@trinitytechsolutions.com" className="text-blue-600 hover:text-blue-700">
+          sales@trinitytechsolutions.com
+            </a>
+          </div>
+        </div>
+        
+        <div className="flex items-start">
+          <div className="bg-blue-100 p-3 rounded-full mr-4">
+            <Phone size={24} className="text-blue-600" />
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold text-gray-900 mb-1">Call Us</h4>
+            <p className="text-gray-600 mb-1">USA Office</p>
+            <a href="tel:+12345678901" className="text-blue-600 hover:text-blue-700">
+          +1 (234) 567-8901
+            </a>
+            <p className="text-gray-600 mt-2 mb-1">Global Support</p>
+            <a href="tel:+31234567890" className="text-blue-600 hover:text-blue-700">
+          +31 (234) 567-890
+            </a>
+          </div>
+        </div>
+        
+        <div className="flex items-start">
+          <div className="bg-blue-100 p-3 rounded-full mr-4">
+            <MessageSquare size={24} className="text-blue-600" />
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold text-gray-900 mb-1">Live Chat</h4>
+            <p className="text-gray-600 mb-4">
+          Our support team is available Monday through Friday from 9:00 AM to 6:00 PM CET.
+            </p>
+            <Button variant="outline">
+          Start a Chat
+            </Button>
+          </div>
+        </div>
           </div>
           
           <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-            <h4 className="text-lg font-semibold text-gray-900 mb-3">Schedule a Consultation</h4>
-            <p className="text-gray-600 mb-4">
-              Book a free 30-minute consultation with one of our data experts to discuss your project requirements.
-            </p>
-            <Button variant="primary">
-              Book a Meeting
-            </Button>
+        <h4 className="text-lg font-semibold text-gray-900 mb-3">Schedule a Consultation</h4>
+        <p className="text-gray-600 mb-4">
+          Book a free 30-minute consultation with one of our data experts to discuss your project requirements.
+        </p>
+        <Button variant="primary">
+          Book a Meeting
+        </Button>
           </div>
         </div>
       </div>
