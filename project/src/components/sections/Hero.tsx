@@ -34,9 +34,9 @@ const Hero = () => {
               <div className="flex items-center justify-center mb-8 ">
             <div className="bg-black/10 backdrop-blur-sm px-6 py-2 rounded-full flex items-center space-x-3 ml-[-120px] mt-8">
               <img 
-                src="https://www.databricks.com/wp-content/uploads/2021/10/db-nav-logo.svg" 
+                src="https://miro.medium.com/v2/resize:fit:1400/1*gaEusfetXumnAjevbN6yCA.png" 
                 alt="Databricks Logo" 
-                className="h-8"
+                className="h-6 w-auto mr-2"
               />
               <div className="w-px h-6 bg-white/20"></div>
               <span className="text-black font-medium">Official Consulting Partner</span>
@@ -48,7 +48,7 @@ const Hero = () => {
               <p className="text-gray-600 text-xl mb-8">
                 Harnessing the power of data analytics to transform businesses in Oman, Netherlands, USA, and India.
               </p>
-              <Button variant="primary" size="lg" className="bg-[#00A862] hover:bg-[#008F53] text-lg px-8">
+              <Button variant="primary" size="lg" className="bg-[#00A862] hover:bg-[#008F53] text-lg px-8 rounded-xl">
                 See What's Different
               </Button>
             </div>
