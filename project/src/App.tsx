@@ -15,7 +15,6 @@ function App() {
   return (
     <div className="font-sans">
       <Header />
-      <main>
         <Hero />
         <About />
         <Services />
@@ -25,7 +24,7 @@ function App() {
         <Insights />
         <Careers />
         <Contact />
-      </main>
+      
       <Footer />
     </div>
   );

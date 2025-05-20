@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Foldit:wght@100..900&family=IM+Fell+DW+Pica+SC&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -85,4 +87,46 @@
 }
 .animate-spin-slow {
   animation: spin-slow 8s linear infinite;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-animation {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* index.css or your global CSS file */
+a {
+  position: relative; /* Ensure the anchor tag is positioned relative for absolute children */
+  padding-bottom: 5px; /* Optional: Adjust padding if needed */
+}
+
+a span {
+  display: block; /* Make the span a block element */
+  height: 2px; /* Adjust height as needed for the underline */
+  background-color: blue; /* Change to your desired color */
+  position: absolute; /* Position it absolutely within the anchor */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: -2px; /* Adjust position to place it directly below the text */
+  transform: scaleX(0); /* Start with the underline hidden */
+  transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+}
+
+a:hover span {
+  transform: scaleX(1); /* Scale the underline to full width on hover */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Foldit:wght@100..900&family=IM+Fell+DW+Pica+SC&display=swap');
+
+.font-ancizar {
+  font-family: 'Ancizar Sans', Arial, sans-serif;
 }
