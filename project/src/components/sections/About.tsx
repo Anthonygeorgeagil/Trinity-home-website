@@ -15,7 +15,7 @@ const About = () => (
     title="About Trinity Technology Solution"
     subtitle="Your Trusted Partner in Digital Transformation"
   >
-    <div className="grid md:grid-cols-2 gap-12 items-center pb-2">
+    <div className="grid md:grid-cols-2 gap-12 items-center pb-2 font-ancizar">
       <div>
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
         <p className="text-gray-600 mb-6">
@@ -33,8 +33,11 @@ const About = () => (
       </div>
       <div className="grid grid-cols-2 gap-6">
         {stats.map((stat, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-            <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4">
+          <div
+            key={index}
+            className="p-6 rounded-lg shadow-md border border-gray-100 bg-white flex flex-col items-center"
+          >
+            <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4 mx-auto">
               {stat.icon}
             </div>
             <div className="text-3xl font-bold text-gray-900 mb-1 text-center">{stat.value}</div>

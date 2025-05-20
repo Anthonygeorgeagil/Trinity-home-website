@@ -10,9 +10,8 @@ const Logo: React.FC<LogoProps> = ({ className = '' }) => {
       <img
         src={trinity}
         alt="TrinityTech Logo"
-        className="mr-6 h-20 mt-4" // Adjust height as needed
+        className="mr-6 ml-8 h-28 mt-4" // Increased height from h-20 to h-28
       />
-      
     </div>
   );
 };
