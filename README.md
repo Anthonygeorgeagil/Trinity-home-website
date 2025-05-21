@@ -20,7 +20,7 @@ Prerequisites: Node.js (v16 or higher recommended) npm or yarn
 
 Installation:
 
-Clone the repository: git clone https://github.com/your-username/project-trinity.git cd project-trinity
+Clone the repository: git clone https://github.com/Mutheeswaran124/project-trinity.git cd project-trinity
 
 Install dependencies: npm install or yarn install
 
