@@ -13,16 +13,16 @@ const GlobalPresence = () => {
       year: '2020',
       address: '300 Interpace Parkway, Plano, TX',
       coordinates: { x: '25%', y: '40%' },
-      image: 'https://images.pexels.com/photos/2846815/pexels-photo-2846815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: 'https://content.civicplus.com/api/assets/5d325e2d-432a-4e7b-aaed-f9d662512dc5?cache=1800'
     },
     {
       id: 'india',
       name: 'India',
       city: 'Chennai',
       year: '2021',
-      address: 'No.37, GST Road, Chromepet, Chennai - 600044',
+      address: 'No.2, Avvaiyar street, Ekkatuthaangal, Chennai - 600044',
       coordinates: { x: '67%', y: '51%' },
-      image: 'https://images.pexels.com/photos/1538177/pexels-photo-1538177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tidel_Park.jpg/500px-Tidel_Park.jpg'
     },
     {
       id: 'oman',
@@ -31,7 +31,7 @@ const GlobalPresence = () => {
       year: '2022',
       address: 'Al Khuwair, Muscat, Oman',
       coordinates: { x: '58%', y: '48%' },
-      image: 'https://images.pexels.com/photos/3214995/pexels-photo-3214995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image:  'https://cdn.britannica.com/70/188370-050-EE6758B6/Muscat-Oman.jpg'
     },
     {
       id: 'netherlands',
@@ -40,7 +40,7 @@ const GlobalPresence = () => {
       year: '2023',
       address: 'The Hague, Netherlands',
       coordinates: { x: '70%', y: '55%' },
-      image: 'https://images.pexels.com/photos/248722/pexels-photo-248722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: 'https://cdn.britannica.com/89/102289-050-EF27EAA0/Hague-Neth.jpg'
     }
   ];
 

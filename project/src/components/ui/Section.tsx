@@ -2,11 +2,12 @@ import React from 'react';
 
 interface SectionProps {
   id: string;
-  title: string;
-  subtitle?: string;
+  
   children: React.ReactNode;
-  className?: string;
+  className?: string; title: React.ReactNode;
+  subtitle?: React.ReactNode;
   dark?: boolean;
+  
 }
 
 const Section: React.FC<SectionProps> = ({
