@@ -1,5 +1,8 @@
 import React from 'react';
 import Button from '../ui/Button';
+// Add this import for Lottie
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const cardData = [
   {
@@ -54,7 +57,6 @@ const partnerLogos = [
   "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmJtv2KX5wBcTHbVpmP2gSdySVtSbpG3pHaHn9Jyz022CCboo4O9mQWz1Eq6h_sPTqo1A&usqp=CAU",
   "https://www.getdbt.com/_next/image?url=%2Fimg%2Flogos%2Fdbt-labs-logo.svg&w=256&q=75",
-  // Ford logo removed
 ];
 
 const Hero = () => {
@@ -64,61 +66,49 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-10 md:gap-x-12 items-center">
           {/* Left Side */}
           <div className="max-w-2xl mx-auto lg:mx-0 flex flex-col">
-            <div className="flex items-center gap-3 sm:gap-4 bg-white rounded-full px-4 sm:px-5 md:px-7 py-2 w-fit mb-6 sm:mb-8 md:mb-16 shadow-md border border-blue-900/40 backdrop-blur-sm">
+            {/* Databricks Official Consulting Partner Badge - Smaller */}
+            <div
+              className="flex items-center gap-2 sm:gap-3 bg-white rounded-full px-3 sm:px-4 md:px-5 py-1.5 w-fit mb-4 sm:mb-6 md:mb-8 shadow-md border border-blue-900/40 backdrop-blur-sm"
+            >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png"
                 alt="Databricks"
-                className="h-9 w-9 sm:h-10 sm:w-10 md:h-14 md:w-14 object-contain"
+                className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 object-contain"
               />
-              <span className="text-[#22396b] font-medium text-xs sm:text-sm md:text-base tracking-wide">
+              <a
+                href="https://www.databricks.com/partners"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-[#22396b] font-bold text-sm sm:text-base md:text-lg tracking-wide hover:underline"
+              >
                 Trinity-databricks consulting partner
-              </span>
+                <ArrowUpRight className="w-4 h-4 ml-1" />
+              </a>
             </div>
-            <h1 className="text-xl sm:text-3xl md:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 md:mb-4 text-[#1B365D]">
-              Empowering Data-Driven Decisions Across the Globe
+
+            {/* Main Heading - Increased font sizes */}
+            <h1 className="text-3xl sm:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-4 leading-tight text-blue-700 ">
+              Empowering <br />
+              Data-Driven Decisions <br />
+              <span className="text-black block mt-2">Across the Globe</span>
             </h1>
-            <p className="text-gray-600 text-sm sm:text-base md:text-xl mb-4 sm:mb-6 md:mb-8">
-              Harnessing the power of data analytics to transform businesses in Oman, Netherlands, USA, and India.
-            </p>
             <Button
               variant="primary"
               size="lg"
-              className="bg-[#00A862] hover:bg-[#008F53] text-base md:text-lg px-6 md:px-8 w-full sm:w-auto"
+              className="bg-[#00A862] hover:bg-[#008F53] text-base px-6 w-fit font-semibold"
             >
               See What's Different
             </Button>
           </div>
 
-          {/* Card grid with custom sizes and positions */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 grid-rows-3 sm:grid-rows-2 auto-rows-fr gap-3 sm:gap-4 md:gap-6 mt-6 lg:mt-0">
-            {cardData.map((card, idx) => (
-              <div
-                key={idx}
-                className={
-                  cardGridStyles[idx] +
-                  " rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col justify-end relative"
-                }
-              >
-                {card.type === 'image' ? (
-                  <img
-                    src={card.src}
-                    alt={card.alt}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <video
-                    src={card.src}
-                    autoPlay
-                    loop
-                    muted
-                    className="w-full h-full object-cover"
-                  />
-                )}
-                <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs sm:text-sm md:text-base font-semibold px-2 sm:px-3 md:px-4 py-1 sm:py-2 md:py-3">
-                  {card.label}
-                </div>
-              </div>
-            ))}
+          {/* Right Side: Lottie Animation - Slightly bigger */}
+          <div className="flex justify-center items-center w-full h-full">
+            <DotLottieReact
+              src="https://lottie.host/a8037778-cf68-423b-8a82-d665927f90fa/oNfJ6iHKf9.lottie"
+              loop
+              autoplay
+              style={{ width: '100%', maxWidth: 480, height: 480 }}
+            />
           </div>
         </div>
 
