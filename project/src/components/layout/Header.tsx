@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, ChevronDown, Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
 import Logo from '../ui/Logo';
+import trinity from '../ui/trinity.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,7 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-white py-4'
+        isScrolled ? 'bg-white shadow-md' : 'bg-white'
       }`}
     >
       {/* Top Navigation */}
@@ -36,8 +37,10 @@ const Header = () => {
 
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
-          <Logo className="h-12 w-auto" />
+        <div className="flex items-center justify-between">
+          <a href="/" className="block">
+            <img src={trinity} alt="Trinity Logo" className="h-20 w-auto" />
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

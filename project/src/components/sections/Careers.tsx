@@ -74,7 +74,10 @@ const Careers = () => {
       <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Current Openings</h3>
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         {jobOpenings.map((job, index) => (
-          <div key={index} className="bg-white rounded-lg p-6 hover:bg-slate-100 transition-colors border border-gray-200 shadow-lg">
+          <div
+            key={index}
+            className="bg-white rounded-lg p-6 text-center border border-transparent hover:border-2 hover:border-black transition-all duration-300 hover:-translate-y-2 flex flex-col items-start shadow-lg"
+          >
             <h4 className="text-xl font-bold text-gray-900 mb-3">{job.title}</h4>
             <div className="flex items-center text-gray-500 mb-2">
               <MapPin size={16} className="mr-1" />
@@ -87,7 +90,7 @@ const Careers = () => {
             <p className="text-gray-700 mb-6">{job.description}</p>
             <Button 
               variant="outline" 
-              className="w-full border-gray-600 text-gray-900 hover:bg-gray-100"
+              className="w-full border border-transparent hover:border-2 hover:border-black text-gray-900 hover:bg-blue-500 hover:text-white transition-all duration-300"
             >
               View Details
             </Button>

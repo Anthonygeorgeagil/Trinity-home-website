@@ -17,14 +17,15 @@ const About = () => (
   >
     <div className="grid md:grid-cols-2 gap-12 items-center pb-2 font-ancizar">
       <div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-        <p className="text-gray-600 mb-6">
+
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 font-sans">Our Vision</h3>
+        <p className="text-gray-600 mb-6 font-sans">
           Founded in 2020, Trinity Technology Solution LLC has been at the forefront of digital transformation, helping enterprises harness the power of data analytics and cloud solutions. Our commitment to excellence and innovation has made us a trusted partner for businesses worldwide.
         </p>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 font-sans">
           As a certified Databricks partner, we specialize in data engineering, analytics, and AI solutions that drive business growth and operational efficiency. Our expertise spans across cloud migration, data governance, and enterprise-scale digital transformation initiatives.
         </p>
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 font-sans">
           <h4 className="font-semibold text-blue-800 mb-2">Official Databricks Partner</h4>
           <p className="text-blue-700">
             Our strategic partnership with Databricks enables us to deliver cutting-edge lakehouse architecture and advanced analytics solutions that transform how organizations leverage their data assets.
@@ -35,7 +36,7 @@ const About = () => (
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="p-6 rounded-lg shadow-md border border-gray-100 bg-white flex flex-col items-center"
+            className="p-6 rounded-lg shadow-md border border-gray-100 bg-white flex flex-col items-center font-sans group hover:cursor-pointer hover:border-2 hover:border-black transition-all duration-300"
           >
             <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4 mx-auto">
               {stat.icon}

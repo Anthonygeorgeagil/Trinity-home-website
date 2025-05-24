@@ -11,7 +11,7 @@ const Insights = () => {
       date: 'June 15, 2025',
       image: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       excerpt: 'Discover how businesses are using big data analytics to drive growth and innovation in today\'s competitive landscape.',
-      url: 'https://towardsdatascience.com/how-big-data-is-fueling-business-growth-4d3c2386e52f'
+      url: 'https://www.ibm.com/topics/big-data-analytics'
     },
     {
       title: 'The Future of Data Engineering',
@@ -19,7 +19,7 @@ const Insights = () => {
       date: 'May 28, 2025',
       image: 'https://images.pexels.com/photos/374899/pexels-photo-374899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       excerpt: 'Explore emerging trends in data engineering and how they are reshaping the way organizations handle data.',
-      url: 'https://databricks.com/blog/2024/06/06/what-does-a-data-engineer-do.html'
+      url: 'https://www.databricks.com/blog/2023/12/12/future-of-data-engineering.html'
     },
     {
       title: 'AI and Machine Learning in Healthcare',
@@ -27,7 +27,7 @@ const Insights = () => {
       date: 'April 10, 2025',
       image: 'https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       excerpt: 'How artificial intelligence and machine learning are transforming patient care and medical research.',
-      url: 'https://healthitanalytics.com/news/how-ai-machine-learning-are-transforming-healthcare'
+      url: 'https://www.mckinsey.com/industries/healthcare/our-insights/how-artificial-intelligence-is-transforming-the-future-of-healthcare'
     }
   ];
 
@@ -84,26 +84,7 @@ const Insights = () => {
       </div>
 
       {/* Resources Section */}
-      <div className="bg-gray-50 rounded-lg p-8">
-        <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-          Download Our Resources
-        </h3>
-        <div className="grid md:grid-cols-3 gap-6">
-          {resources.map((resource, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col h-full">
-              <div className="text-3xl mb-4">{resource.icon}</div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-2">{resource.title}</h4>
-              <p className="text-sm text-gray-500 mb-4">{resource.type}</p>
-              <Button 
-                variant="outline"
-                className="mt-auto w-full"
-              >
-                Download
-              </Button>
-            </div>
-          ))}
-        </div>
-      </div>
+    
     </Section>
   );
 };
