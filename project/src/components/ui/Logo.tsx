@@ -8,7 +8,7 @@ const Logo: React.FC<LogoProps> = ({ className = '' }) => {
   return (
     <div className={`flex items-center ${className}`}>
       <img
-        src={trinity}
+       src="https://trinitetech.com/wp-content/uploads/2023/12/Logo-trinity.webp"
         alt="TrinityTech Logo"
         className="mr-6 ml-8 h-28 mt-4" // Increased height from h-20 to h-28
       />
