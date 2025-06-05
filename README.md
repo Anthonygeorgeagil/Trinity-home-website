@@ -1,44 +1,90 @@
 Project Trinity
 
-A modern, responsive React web application for Trinity Technology Solution LLC, showcasing global presence, services, and expertise in data analytics and digital transformation.
+A modern, responsive React web application for Trinity Technology Solution LLC, showcasing their global presence, services, and expertise in data analytics and digital transformation.
 
 Features
 
-Responsive design using Tailwind CSS
-Modular React components for sections like Hero, About, Global Presence, etc.
-Animated timeline for global office locations
+Responsive design built with Tailwind CSS
+
+Modular React components for various sections like Hero, About, Global Presence, and more
+
+Animated timeline showcasing global office locations
+
 Interactive map with clickable location markers
-Custom fonts and modern UI
-Smooth navigation for desktop and mobile
+
+Custom fonts and sleek, modern UI
+
+Smooth navigation experience on both desktop and mobile devices
+
 Tech Stack
 
-React (with hooks and functional components) TypeScript Tailwind CSS Vite Lucide React (for icons)
+React (Functional components with hooks)
+
+TypeScript
+
+Tailwind CSS
+
+Vite (Build tool)
+
+Lucide React (Icon library)
 
 Getting Started
 
-Prerequisites: Node.js (v16 or higher recommended) npm or yarn
+Prerequisites
 
-Installation:
+Node.js v16 or higher (recommended)
 
-Clone the repository: git clone https://github.com/Mutheeswaran124/project-trinity.git cd project-trinity
+npm or yarn package manager
 
-Install dependencies: npm install or yarn install
+Installation
 
-Start the development server: npm run dev or yarn dev
+Clone the repository
 
-Open your browser and visit: http://localhost:5173
+bash
+Copy
+Edit
+git clone https://github.com/Anthonygeorgeagil/Trinity-home-website.git
+cd Trinity-home-website
+Install dependencies
+
+bash
+Copy
+Edit
+npm install
+# or
+yarn install
+Start the development server
+
+bash
+Copy
+Edit
+npm run dev
+# or
+yarn dev
+Open your browser and visit:
+http://localhost:5173
 
 Project Structure
 
-project-trinity/ project/ src/ components/ layout/ sections/ ui/ index.css main.tsx ... package.json README.md
-
+css
+Copy
+Edit
+Trinity-home-website/
+├── project/
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   ├── sections/
+│   │   └── ui/
+│   ├── index.css
+│   ├── main.tsx
+├── package.json
+└── README.md
 Customization
 
-Update logo and images in src/components/ui/Logo.tsx and section files.
-Change colors and fonts in Tailwind config and index.css.
-Edit text and data in section components.
-Deployment
+Update the logo and images in src/components/ui/Logo.tsx and relevant section components.
 
-To build for production: npm run build or yarn build
+Modify colors and fonts in the Tailwind CSS configuration file and index.css.
 
-The output will be in the dist/ folder. Deploy to any static hosting (Vercel, Netlify, GitHub Pages, etc).
+Edit text content and data directly within the section components.
+
