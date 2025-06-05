@@ -1,5 +1,6 @@
 import React from 'react';
 import Section from '../ui/Section';
+import service from '../../animations/service.lottie?url';
 import {
   LineChart,
   Database,
@@ -7,6 +8,8 @@ import {
   BarChart,
   Cloud,
   BrainCircuit,
+  Users,
+  Briefcase, // Use Briefcase icon for ERP Planning
 } from 'lucide-react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
@@ -48,6 +51,18 @@ const Services = () => {
       description:
         'Implementing AI solutions to drive innovation, automate processes, and uncover hidden patterns in your data.',
     },
+    {
+      icon: <Users size={48} className="text-blue-600" />,
+      title: 'Staffing Solutions',
+      description:
+        'Providing skilled data professionals to augment your team and accelerate project delivery with flexible staffing models.',
+    },
+    {
+      icon: <Briefcase size={48} className="text-blue-600" />,
+      title: 'ERP Planning',
+      description:
+        'Streamlining business processes and integrating core functions with tailored ERP solutions for operational efficiency.',
+    },
   ];
 
   return (
@@ -57,32 +72,50 @@ const Services = () => {
       subtitle="Comprehensive data solutions tailored to your business needs"
       className="bg-gray-50"
     >
-      <div className="relative flex justify-center items-center min-h-[800px]">
-        {/* Service Cards in a circle around the animation */}
-        <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-          <div className="relative w-full h-full max-w-[700px] max-h-[700px] mx-auto">
+      <div className="container mx-auto px-4 py-8">
+        {/* Desktop Layout - Grid with centered animation */}
+        <div className="hidden md:block">
+          <div className="grid grid-cols-3 gap-6 md:gap-8 relative mx-auto max-w-6xl">
+            {/* Animation in center */}
+            <div className="col-start-2 row-start-2 flex justify-center items-center z-20">
+              <DotLottieReact
+                src={service}
+                loop
+                autoplay
+                style={{ width: 320, height: 320 }}
+              />
+            </div>
+            
+            {/* Service Cards in a grid around the animation */}
             {services.map((service, idx) => {
-              const angle = (idx / services.length) * 2 * Math.PI;
-              const radius = 340; // px (slightly increased from 300)
-              const x = Math.cos(angle) * radius;
-              const y = Math.sin(angle) * radius;
+              // Calculate grid position for each card
+              let colStart, rowStart;
+              
+              // Top row
+              if (idx === 0) { colStart = 1; rowStart = 1; }
+              else if (idx === 1) { colStart = 2; rowStart = 1; }
+              else if (idx === 2) { colStart = 3; rowStart = 1; }
+              // Middle row (excluding center)
+              else if (idx === 3) { colStart = 1; rowStart = 2; }
+              else if (idx === 4) { colStart = 3; rowStart = 2; }
+              // Bottom row
+              else if (idx === 5) { colStart = 1; rowStart = 3; }
+              else if (idx === 6) { colStart = 2; rowStart = 3; }
+              else { colStart = 3; rowStart = 3; }
+              
               return (
                 <div
                   key={service.title}
-                  className="absolute w-80 h-72" // increased width and height (w-80 = 20rem, h-72 = 18rem)
-                  style={{
-                    left: `calc(50% + ${x}px - 10rem)`, // 10rem = 160px (half of w-80)
-                    top: `calc(50% + ${y}px - 9rem)`,   // 9rem = 144px (half of h-72)
-                  }}
+                  style={{ gridColumn: colStart, gridRow: rowStart }}
                 >
-                  <div className="relative w-full h-full overflow-hidden bg-white rounded-lg group hover:cursor-pointer border border-transparent hover:border-2 hover:border-black transition-all duration-300">
+                  <div className="h-64 md:h-72 overflow-hidden bg-white rounded-lg shadow-lg group hover:cursor-pointer border border-transparent hover:border-2 hover:border-blue-600 transition-all duration-300 relative hover:shadow-2xl">
                     {/* Frosted Overlay */}
-                    <div className="absolute inset-0 bg-white/40 backdrop-blur-[30px] z-10 rounded-lg"></div>
+                    <div className="absolute inset-0 bg-white/40 backdrop-blur-[30px] z-10 rounded-lg pointer-events-none"></div>
                     {/* Card Content */}
-                    <div className="relative z-20 p-10 flex flex-col justify-center items-center text-gray-900 h-full">
+                    <div className="relative z-20 p-4 md:p-6 flex flex-col justify-center items-center text-gray-900 h-full">
                       <div className="mb-4 flex justify-center items-center w-full">{service.icon}</div>
-                      <h3 className="text-2xl font-semibold mb-2 text-center">{service.title}</h3>
-                      <p className="text-base text-gray-700 text-center">{service.description}</p>
+                      <h3 className="text-xl font-semibold mb-2 text-center">{service.title}</h3>
+                      <p className="text-sm text-gray-700 text-center">{service.description}</p>
                     </div>
                   </div>
                 </div>
@@ -90,14 +123,37 @@ const Services = () => {
             })}
           </div>
         </div>
-        {/* Center Lottie Animation */}
-        <div className="z-20 flex justify-center items-center">
-          <DotLottieReact
-            src="https://lottie.host/abc637a9-8669-4167-9d37-f39faecbf35a/phzPSr5Ebn.lottie"
-            loop
-            autoplay
-            style={{ width: 380, height: 380 }}
-          />
+        
+        {/* Mobile Layout */}
+        <div className="md:hidden">
+          {/* Center Animation for Mobile */}
+          <div className="flex justify-center items-center mb-8">
+            <DotLottieReact
+              src="https://lottie.host/abc637a9-8669-4167-9d37-f39faecbf35a/phzPSr5Ebn.lottie"
+              loop
+              autoplay
+              style={{ width: 200, height: 200 }}
+            />
+          </div>
+          
+          {/* Service Cards Grid for Mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="relative h-60 overflow-hidden bg-white rounded-lg shadow-lg group hover:cursor-pointer border border-transparent hover:border-2 hover:border-blue-600 transition-all duration-300"
+              >
+                {/* Frosted Overlay */}
+                <div className="absolute inset-0 bg-white/40 backdrop-blur-[30px] z-10 rounded-lg pointer-events-none"></div>
+                {/* Card Content */}
+                <div className="relative z-20 p-4 flex flex-col justify-center items-center text-gray-900 h-full">
+                  <div className="mb-2 flex justify-center items-center w-full">{service.icon}</div>
+                  <h3 className="text-lg font-semibold mb-1 text-center">{service.title}</h3>
+                  <p className="text-xs text-gray-700 text-center">{service.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Section>

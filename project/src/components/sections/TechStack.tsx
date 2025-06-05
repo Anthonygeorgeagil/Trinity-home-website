@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../ui/Section';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
+import collab from '../../animations/collab.lottie?url';
 const TechStack = () => {
   const technologies = [
     {
@@ -68,7 +68,7 @@ const TechStack = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Proud Databricks Partner</h3>
           {/* Animation below the heading */}
           <DotLottieReact
-            src="https://lottie.host/6cbb0931-bb49-4480-a63f-119086917dc1/cgKGuBxPfU.lottie"
+            src={collab}
             loop
             autoplay
             style={{ width: 230, height: 230 }}

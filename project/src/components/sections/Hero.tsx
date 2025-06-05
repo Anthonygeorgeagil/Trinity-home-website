@@ -3,6 +3,8 @@ import Button from '../ui/Button';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { ArrowUpRight } from 'lucide-react';
 import { motion, useInView } from "framer-motion";
+import mainhero from '../../animations/mainhero.lottie?url';
+ // Add this import at the top
 
 const cardData = [
 	{
@@ -123,7 +125,7 @@ const Hero: React.FC = () => {
 						className="flex justify-center items-center w-full h-full"
 					>
 						<DotLottieReact
-							src="https://lottie.host/a8037778-cf68-423b-8a82-d665927f90fa/oNfJ6iHKf9.lottie"
+							src={mainhero}
 							loop
 							autoplay
 							style={{ width: '100%', maxWidth: 560, height: 560 }}

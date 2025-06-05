@@ -37,9 +37,16 @@ const Industries = () => {
     {
       id: 'telecom',
       name: 'Telecommunications',
-      image: 'https://images.pexels.com/photos/2538122/pexels-photo-2538122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://media.istockphoto.com/id/1363385264/photo/telecommunication-tower-for-2g-3g-4g-5g-network-during-sunset-antenna-bts-microwave-repeater.jpg?s=612x612&w=0&k=20&c=0sZTFtN0EByaBoen9TIXargCgte2ejR91L36M-y8OEY=',
       description: 'Optimizing network performance, customer segmentation, and service quality for telecom providers.',
       caseStudy: 'Reduced customer churn by 18% through predictive analytics and personalized retention strategies.'
+    },
+    {
+      id: 'oilgas',
+      name: 'Oil & Gas',
+      image: 'https://eco-cdn.iqpc.com/eco/images/channel_content/images/biggest_oil_and_gas_companies.jpg',
+      description: `We support the Oil & Gas industry with recruitment and staffing for upstream (exploration, drilling, production), midstream (storage, transportation), and downstream (refining, sales, distribution) operations. Our expertise covers digital transformation, energy transition, safety, compliance, and global workforce needs. We also specialize in EPC/EPCI hiring for both onshore and offshore projects, including engineering, commissioning, and HSE roles.`,
+      caseStudy: 'Staffed a multidisciplinary team for a major offshore project, ensuring timely delivery and compliance across all phases.'
     }
   ];
 

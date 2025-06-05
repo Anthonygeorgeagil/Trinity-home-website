@@ -76,7 +76,7 @@ const Careers = () => {
         {jobOpenings.map((job, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg p-6 text-center border border-transparent hover:border-2 hover:border-black transition-all duration-300 hover:-translate-y-2 flex flex-col items-start shadow-lg"
+            className=" rounded-lg p-6 text-center border border-transparent hover:border-2 hover:border-black transition-all duration-300 hover:-translate-y-2 flex flex-col items-start shadow-lg"
           >
             <h4 className="text-xl font-bold text-gray-900 mb-3">{job.title}</h4>
             <div className="flex items-center text-gray-500 mb-2">
@@ -90,7 +90,7 @@ const Careers = () => {
             <p className="text-gray-700 mb-6">{job.description}</p>
             <Button 
               variant="outline" 
-              className="w-full border border-transparent hover:border-2 hover:border-black text-gray-900 hover:bg-blue-500 hover:text-white transition-all duration-300"
+            className="w-full text-center inline-block px-4 py-2 rounded-md border border-blue-600 text-white bg-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
             >
               View Details
             </Button>
@@ -107,8 +107,7 @@ const Careers = () => {
           <Briefcase size={16} className="mr-2" />
           Submit Your Resume
         </Button>
-      </div>
-    </Section>
+      </div>    </Section>
   );
 };
 

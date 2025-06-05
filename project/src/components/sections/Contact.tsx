@@ -3,6 +3,7 @@ import Section from '../ui/Section';
 import Button from '../ui/Button';
 import { Mail, Phone, MessageSquare } from 'lucide-react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import contact from '../../animations/contact.lottie?url';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -33,7 +34,7 @@ const Contact = () => {
       {/* Animation after the heading */}
       <div className="flex justify-center mb-8">
         <DotLottieReact
-          src="https://lottie.host/003a7666-6b61-40a0-822f-46007366681b/MwB5MIPjfR.lottie"
+          src={contact}
           loop
           autoplay
           style={{ width: 210, height: 210 }}
