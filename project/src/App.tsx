@@ -10,6 +10,7 @@ import Insights from './components/sections/Insights';
 import Careers from './components/sections/Careers';
 import Contact from './components/sections/Contact';
 import GlobalPresence from './components/sections/GlobalPresence';
+import Adminlogin from './components/admin/Adminlogin'; 
 
 function App() {
   return (

@@ -144,6 +144,33 @@ const GlobalPresence = () => {
           </button>
         ))}
       </div>
+
+      {/* Desktop styles */}
+      <style>{`
+        .timeline {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .timeline-item {
+          width: 50%;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 600px) {
+          .timeline {
+            flex-direction: column;
+            align-items: stretch;
+          }
+          .timeline-item {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+          .timeline-line {
+            left: 20px;
+          }
+        }
+      `}</style>
     </Section>
   );
 };
